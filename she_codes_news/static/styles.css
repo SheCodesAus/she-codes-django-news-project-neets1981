@@ -48,14 +48,17 @@ nav {
 
 a {
     margin: 2px;
-    /* text-decoration: none; */
+    text-decoration: none; 
     color: #000;
-    text-decoration: underline;
-    padding: 10px;
-    cursor: pointer;
-    text-transform: uppercase;
+    
 }
 
 a, p {
     font-family: monospace;
+}
+nav a {
+    text-decoration: underline;
+    padding: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
 }
