@@ -9,3 +9,4 @@ class NewsStory(models.Model):
     pub_date = models.DateTimeField()
     content = models.TextField()
     place_image=models.CharField(max_length=200)
+

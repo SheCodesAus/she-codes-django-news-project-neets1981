@@ -12,6 +12,17 @@
         <!-- <img src="{% static '/news/images/placeholder-5.jpg' %}"> -->
         {{ story.content|linebreaks }}
     </div>
+    <div>
+    <ul>
+        {% if request.user.is_authenticated %}
+        <li><a href="{% url 'news:storyedit' story.id %}"class="btn btn-primary">Update Story</a></li>
+       <li> <a href="{% url 'news:deletestory' story.id %}" >Delete Story</a></li>
+    </ul>
+
+    
+    {% else %}
+    {% endif %}
+    </div>
     
 </div>
 {% endblock %}

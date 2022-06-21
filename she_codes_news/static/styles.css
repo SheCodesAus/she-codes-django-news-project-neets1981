@@ -49,7 +49,7 @@ nav {
 a {
     margin: 2px;
     text-decoration: none; 
-    color: #000;
+    color: rgb(197, 89, 232);
     
 }
 
@@ -62,3 +62,13 @@ nav a {
     cursor: pointer;
     text-transform: uppercase;
 }
+form input[type=“submit” i] {
+    background-color:rgb(218, 100, 208);
+    color: #000;
+    justify-content: center;
+    border-radius: 60px;
+    height: 30px;
+    width: 200px;
+    margin: auto;
+    font-size: 1rem;
+} 
