@@ -2,6 +2,7 @@
 
 {% block content %}
 
+<h2>Update story</h2>
 
 {% if request.user.is_authenticated %}
 <form action="" method="post">
@@ -14,13 +15,7 @@
     <a href="{% url 'news:newStory' %}"></a>
    
 {% else %}
-<h3> Oops, Something went wrong!!! </h3>
-<a href="{% url 'login' %}"><h4> Click here to Login </h4></a>
-
+    <p>Please login </p>
 {% endif %}
 
 {% endblock %}
-
-
-        
-  

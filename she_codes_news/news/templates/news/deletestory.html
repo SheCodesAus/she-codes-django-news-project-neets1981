@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+
+{% if request.user.is_authenticated %}
+<form action="" method="post">
+    {% csrf_token %} 
+    
+    {{ form.as_p }}
+    <h4>Do you want to delete story?</h4>
+    
+    <input type="submit" value=" Confirm ">
+
+      
+{% else %}
+{% endif %}
+
+{% endblock %}

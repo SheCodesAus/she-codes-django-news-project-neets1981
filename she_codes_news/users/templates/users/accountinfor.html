@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% if request.user.is_authenticated %}
+<h3>Profile information : </h3>
+
+<h4>Username = {{request.user.username}}</h4>
+<h4>Email = {{request.user.email}}</h4>
+   
+{% else %}
+<h3> Oops, Something went wrong!!! </h3>
+<a href="{% url 'login' %}"><h4> Click here to Login </h4></a>
+
+
+{% endif %}
+
+{% endblock %}
