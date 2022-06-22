@@ -14,7 +14,9 @@
     <a href="{% url 'news:newStory' %}"></a>
    
 {% else %}
-    <p>Please login </p>
+<h3> Oops, Something went wrong!!! </h3>
+<a href="{% url 'login' %}"><h4> Click here to Login </h4></a>
+
 {% endif %}
 
 {% endblock %}

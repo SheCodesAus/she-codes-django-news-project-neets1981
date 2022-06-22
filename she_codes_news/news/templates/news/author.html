@@ -1,0 +1,22 @@
+<h1>Author List</h1>
+<a href="{% url 'news:index' %}" >Go to Home</a>
+{% if author_list %}
+    <ul>
+        {% for story in author_list %}
+            <div id="story-wrapper">
+            <h2>{{ story.title }}</h2>
+            <h4>{{ story.author }}</h4>
+            <div id="story-content">
+                <img src="{{ story.place_image }}">
+                {{ story.content|linebreaks }}
+            
+            </div>
+            </div>
+        {% endfor %}
+    </ul>
+        {% else %}
+        <p>There are no stories by this author.</p>
+        
+        {% endif %}
+        
+        

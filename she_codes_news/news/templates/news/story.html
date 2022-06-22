@@ -15,8 +15,9 @@
     <div>
     <ul>
         {% if request.user.is_authenticated %}
-        <li><a href="{% url 'news:storyedit' story.id %}"class="btn btn-primary">Update Story</a></li>
+        <li><a href="{% url 'news:storyedit' story.id %}" class="btn btn-primary">Update Story</a></li>
        <li> <a href="{% url 'news:deletestory' story.id %}" >Delete Story</a></li>
+       <li><h4>View all stories by <a href="{% url 'news:authorstory' story.author.id %}">{{ story.author }}</a></h4></li>
     </ul>
 
     

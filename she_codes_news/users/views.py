@@ -9,7 +9,7 @@ from .forms import CustomUserCreationForm
 
 class CreateAccountView(CreateView):
     form_class = CustomUserCreationForm
-    success_url = reverse_lazy('login') #it helps usse to go to login url after creting account
+    success_url = reverse_lazy('login') #it helps use to go to login url after creting account
     template_name = 'users/createAccount.html'
 
 class AccountinformationView(generic.TemplateView):

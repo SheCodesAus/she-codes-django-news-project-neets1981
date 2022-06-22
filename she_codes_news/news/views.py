@@ -51,3 +51,24 @@ class DeleteStoryView(DeleteView):
     template_name: str= 'news/deletestory.html'
     context_object_name = 'deletestory'
     success_url = reverse_lazy('news:index')
+
+# class AuthorListView(ListView):
+class StoriesByAuthor(generic.ListView):
+    model = NewsStory
+    # form_class = StoryForm
+    context_object_name = 'author_list'
+    template_name = 'news/author.html'
+    paginate_by = 50
+
+
+    def get_queryset(self):
+        author_id = self.kwargs['pk']
+        return NewsStory.objects.filter(author = author_id,)
+        
+
+    def get_context_data(self, **kwargs):
+        context = super(StoriesByAuthor, self).get_context_data(**kwargs)
+        context['author'] = NewsStory.objects.all()
+        return context
+        
+
