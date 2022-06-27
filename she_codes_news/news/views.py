@@ -62,13 +62,13 @@ class StoriesByAuthor(generic.ListView):
 
 
     def get_queryset(self):
-        author_id = self.kwargs['pk']
-        return NewsStory.objects.filter(author = author_id,)
+        author_id = self.kwargs['author_id']
+        return self.model.objects.filter(author = author_id,)
         
 
     def get_context_data(self, **kwargs):
         context = super(StoriesByAuthor, self).get_context_data(**kwargs)
-        context['author'] = NewsStory.objects.all()
+        context['author'] = self.get_queryset()
         return context
         
 

@@ -62,7 +62,7 @@ nav a {
     cursor: pointer;
     text-transform: uppercase;
 }
-form input[type=“submit” i] {
+input[type=“submit”] {
     background-color:rgb(218, 100, 208);
     color: #000;
     justify-content: center;
